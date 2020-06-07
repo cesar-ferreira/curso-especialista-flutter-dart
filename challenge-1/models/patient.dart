@@ -16,7 +16,7 @@ class Patient {
 
   static Patient buildObjectOfPatient(List list) {
 
-    var fullName = list[0].split(' ');
+    final fullName = list[0].split(' ');
 
     return Patient(
         firstName: fullName[0],
@@ -27,7 +27,7 @@ class Patient {
     );
   }
 
-  static bool checkOfAge(Patient patient) {
+  static bool patientIsOver18(Patient patient) {
     return patient.age >= 18;
   }
 
@@ -35,7 +35,7 @@ class Patient {
     int value = 0;
 
     for(Patient patient in patients) {
-      if(Patient.checkOfAge(patient)) {
+      if(Patient.patientIsOver18(patient)) {
         value++;
       }
     }

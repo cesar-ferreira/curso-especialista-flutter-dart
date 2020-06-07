@@ -5,23 +5,21 @@ class Report {
 
   static bool simpleListValidation(List list) {
 
-    bool valid = true;
-
-    for(var item in list) {
+    for(final item in list) {
       List patient = item.split('|');
       if(patient.length != 4) {
-        valid = false;
-        break;
+        return false;
       }
     }
-    return valid;
+
+    return true;
   }
 
   static List<Family> buildObjects(List list) {
 
-    List<Family> listOfFamilies = [];
+    final List<Family> listOfFamilies = [];
 
-    for(var item in list) {
+    for(final item in list) {
 
       Patient patient = Patient.buildObjectOfPatient(item.split('|'));
       int index = listOfFamilies.indexWhere(
@@ -45,7 +43,7 @@ class Report {
 
   static void generatePatientReportByFamily(List<Family> families) {
 
-    for(Family family in families) {
+    for(final Family family in families) {
       print("Family ${family.name}:");
       family.patients.forEach((patient) => print("    ${patient.firstName}"));
     }

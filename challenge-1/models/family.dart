@@ -12,7 +12,7 @@ class Family {
 
   static Family buildNewFamily(Patient patient) {
 
-    List<Patient> patients = [patient];
+    final List<Patient> patients = [patient];
     return Family(
         name: patient.familyName,
         patients: patients

@@ -17,7 +17,7 @@ void main() {
   ];
 
   if( Report.simpleListValidation(list) ) {
-    List<Family> listOfFamilies = Report.buildObjects(list);
+    final List<Family> listOfFamilies = Report.buildObjects(list);
     Report.generateCompleteReport(listOfFamilies);
   } else {
     print("Your list contains invalid data, please check the list and correct the data \n"
