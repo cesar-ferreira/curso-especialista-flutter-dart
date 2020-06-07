@@ -21,8 +21,8 @@ class Report {
 
     for(final item in list) {
 
-      Patient patient = Patient.buildObjectOfPatient(item.split('|'));
-      int index = listOfFamilies.indexWhere(
+      final Patient patient = Patient.buildObjectOfPatient(item.split('|'));
+      final int index = listOfFamilies.indexWhere(
               (family) => (family.name.toLowerCase() == patient.familyName.toLowerCase())
       );
 
