@@ -12,6 +12,7 @@ void main() {
     'Sandra Silva|40|estudante|MG',
     'Regina Verne|35|estudante|MG',
     'João Rahman|55|Jornalista|SP',
+    'Julio rahman|35|desenvolvedor|SP',
     'César Ferreira|26|desenvolvedor|PB',
   ];
 

@@ -25,7 +25,7 @@ class Report {
 
       Patient patient = Patient.buildObjectOfPatient(item.split('|'));
       int index = listOfFamilies.indexWhere(
-              (family) => (family.name == patient.familyName)
+              (family) => (family.name.toLowerCase() == patient.familyName.toLowerCase())
       );
 
       index.isNegative
